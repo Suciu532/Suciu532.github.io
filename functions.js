@@ -1,17 +1,3 @@
-
-console.debug('inside functions.js');
-function getInfo(name) {
-    var msg = "Hello, " + name + " ,bine ai venit ";
-    console.warn('inside get info', msg);
-    return msg;
-}
-
-console.info(getInfo("Tudor " + "Suciu"));
-
-var myName = 'Tudor ' + 'Suciu';
-var wellcome = getInfo(myName);
-console.info(wellcome);
-
 function showSkills() {
     document.getElementById('home').style.display = 'none';
     document.getElementById('projects').style.display = 'none';
