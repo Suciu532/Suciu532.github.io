@@ -10,27 +10,13 @@ function hideAllPages() {
     var pages = Array.from(document.getElementsByClassName('page'));
 
     pages.forEach(function (page) {
-        console.warn('inside forEach', page.Id);
         hidePage(page.id)
     });
 }
 
-function showSkills() {
+function show(id) {
     hideAllPages();
-    showPage('skills');
-
-}
-function showHome() {
-    hideAllPages();
-    showPage('home');
-}
-function showProjects() {
-    hideAllPages();
-    showPage('projects');
-}
-function showLanguages() {
-    hideAllPages();
-    showPage('languages');
+    showPage(id);
 }
 
-showSkills();
+show('skills');
