@@ -7,11 +7,11 @@ function showPage(id) {
 }
 
 function hideAllPages() {
-    var pageIds = ['home', 'skills', 'projects', 'languages'];
+    var pages = Array.from(document.getElementsByClassName('page'));
 
-    pageIds.forEach(function (pageId) {
-        console.info('inside forEach', pageId);
-        hidePage(pageId);
+    pages.forEach(function (page) {
+        console.warn('inside forEach', page.Id);
+        hidePage(page.id)
     });
 }
 
