@@ -7,10 +7,11 @@ function showPage(id) {
 }
 
 function hideAllPages() {
-    hidePage('home');
-    hidePage('projects');
-    hidePage('skills');
-    hidePage('languages');
+    var pageIds = ['home', 'skills', 'projects', 'languages'];
+
+    for (var i = 0; i < pageIds.length; i++) {
+        hidePage(pageIds[i]);
+    }
 }
 
 function showSkills() {
