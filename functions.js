@@ -9,9 +9,10 @@ function showPage(id) {
 function hideAllPages() {
     var pageIds = ['home', 'skills', 'projects', 'languages'];
 
-    for (var i = 0; i < pageIds.length; i++) {
-        hidePage(pageIds[i]);
-    }
+    pageIds.forEach(function (pageId) {
+        console.info('inside forEach', pageId);
+        hidePage(pageId);
+    });
 }
 
 function showSkills() {
@@ -31,3 +32,5 @@ function showLanguages() {
     hideAllPages();
     showPage('languages');
 }
+
+showSkills();
