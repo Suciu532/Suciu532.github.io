@@ -11,7 +11,6 @@ function highlight(el) {
         el.style.borderColor = '#99df88';
     }, 200);
     setTimeout(function () {
-        el.style.borderColor = '#e0dfdc';
         el.style.borderColor = '';
     }, 300);
 }
@@ -41,3 +40,12 @@ function showPage(id) {
 }
 
 show('home');
+
+document.querySelector('#top-menu-bar').addEventListener("click", function (e) {
+
+    if (e.target.matches("a")) {
+        var id = e.target.getAttribute("data-page");
+        showPage(id);
+        highlight(e.target);
+    }
+})
