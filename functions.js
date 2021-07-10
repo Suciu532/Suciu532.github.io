@@ -57,17 +57,16 @@ document.querySelector('#top-menu-bar').addEventListener("click", function (e) {
 
 
 var skills = [
-    { name: "html", favorit: true },
-    { name: "js" },
-    { name: "css", favorit: true }
+    { name: "html", favorit: true, endorsements: 7 },
+    { name: "js", endorsements: 10 },
+    { name: "css", favorit: true, endorsements: 5 }
 ];
 
 var skillsHtml = skills.map(function (skill) {
-    console.info(skill);
-    if (skill.favorit) {
-        return `<li class="favorit">${skill.name}</li>`;
-    }
-    return `<li>${skill.name}</li>`;
+    console.info(skill, skill.endorsements);
+    var favorit = skill.favorit ? 'class="favorit"' : '';
+    console.warn('f', favorit);
+    return `<li ${favorit}>${skill.name} <span>${skill.endorsements}</span></li>`;
 
 }).join('');
 

@@ -85,6 +85,19 @@ h1 {
     margin: 0 0 5px 0;
 }
 
+#skills li span {
+    font-weight: normal;
+    color: white;
+    font-style: normal;
+    font-size: 0.9em;
+    background-color: grey;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 1px 5px;
+    min-width: 15px;
+    text-align: center;
+}
+
 td{
     color: cadetblue;
     padding: 10px 10px 10px 10px;
