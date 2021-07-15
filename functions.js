@@ -70,10 +70,29 @@ function showSkills(skills) {
     document.querySelector("#skills ul").innerHTML = skillsHtml;
 }
 
+function sortSkillsByName(a, b) {
+    var aName = a.name.toUpperCase();
+    var bName = b.name.toUpperCase();
+    if (aName < bName) {
+        return -1;
+    }
+    if (aName > bName) {
+        return 1;
+    }
+    if (aName === bName) {
+        return 0;
+    }
+}
+
+function sortSkillsByEndorsments(a, b) {
+    console.info(a.name, b.name, a.endorsements, b.endorsements)
+    return b.endorsements - a.endorsements;
+}
 
 fetch("data/skills.json").then(function (response) {
     return response.json();
 }).then(function (skills) {
+    skills.sort(sortSkillsByEndorsments);
     window, skills = skills;
     showSkills(skills);
 })
