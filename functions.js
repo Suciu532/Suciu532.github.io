@@ -65,7 +65,7 @@ function showSkills(skills) {
     document.querySelector("#skills ul").innerHTML = skillsHtml;
 }
 
-function sortSkillsByName(a, b) {
+const sortSkillsByName = (a, b) => {
     const aName = a.name.toUpperCase();
     const bName = b.name.toUpperCase();
     if (aName < bName) {
@@ -79,7 +79,7 @@ function sortSkillsByName(a, b) {
     }
 }
 
-function sortSkillsByEndorsments(a, b) {
+const sortSkillsByEndorsments = (a, b) => {
     console.info(a.name, b.name, a.endorsements, b.endorsements)
     return b.endorsements - a.endorsements;
 }
